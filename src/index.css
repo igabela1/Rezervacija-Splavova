@@ -1,13 +1,239 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*background-color: #55e055; */
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  /* Stilovi za mobilne uređaje (širina ekrana manja od 600px) */
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+  
+    /* SplavoviLista */
+    .splavovi-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .splav-item {
+      width: 100%; /* Promijenite širinu na 100% */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .splav-item img {
+      width: 100%; /* Promijenite širinu na 100% */
+      height: auto;
+      object-fit: cover; /* Dodajte object-fit */
+    }
+  
+    /* RezervacijaForma */
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background-color: #f9f9f9; /* Dodajemo pozadinu za formu */
+      border-radius: 8px; /* Zaobljeni uglovi */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Dodajemo sjenku */
+    }
+  
+    input,
+    select,
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 12px; /* Povećavamo padding za input polja */
+      font-size: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc; /* Dodajemo ivicu */
+      border-radius: 4px; /* Zaobljeni uglovi input polja */
+    }
+  
+    button {
+      width: 100px; /* Smanjujemo širinu dugmeta */
+      height: 35px; /* Smanjujemo visinu dugmeta */
+      background-color: #007bff; /* Plava boja za dugme */
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Dodajemo tranziciju za hover efekat */
+    }
+  
+    button:hover {
+      background-color: #0056b3; /* Tamnija plava za hover efekat */
+    }
+  
+    /* RezervacijeLista */
+    ul {
+      padding: 0;
+      list-style: none;
+      width: 100%;
+    }
+  
+    li {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    li span {
+      flex-grow: 1;
+      text-align: left;
+    }
+  
+    li button {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  }
+  
+  /* Stilovi za tablete (širina ekrana između 600px i 900px) */
+  @media (min-width: 601px) and (max-width: 900px) {
+    body {
+      font-size: 18px;
+    }
+  
+    /* RezervacijaForma */
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    input,
+    select,
+    button {
+      width: auto;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    button {
+      grid-column: 1 / 3;
+      width: 100px; /* Smanjujemo širinu dugmeta */
+      height: 35px; /* Smanjujemo visinu dugmeta */
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    button:hover {
+      background-color: #0056b3;
+    }
+  
+    /* SplavoviLista */
+    .splavovi-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .splav-item {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Stilovi za desktop (širina ekrana veća od 900px) */
+  @media (min-width: 901px) {
+    body {
+      font-size: 20px;
+    }
+  
+    /* RezervacijaForma */
+    form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    input,
+    select,
+    button {
+      width: auto;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    button {
+      grid-column: 1 / 4;
+      width: 100px; /* Smanjujemo širinu dugmeta */
+      height: 35px; /* Smanjujemo visinu dugmeta */
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    button:hover {
+      background-color: #0056b3;
+    }
+  
+    /* SplavoviLista */
+    .splavovi-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .splav-item {
+      width: 30%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .splavovi-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .splav-item {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .splav-item img {
+    max-width: 300px;
+  }
+  
+  /* Centriranje teksta */
+  h1 {
+    text-align: center;
+  }
+  
+  ul {
+    text-align: center;
+  }
+  
+  .splav-item {
+    text-align: center;
+  }
