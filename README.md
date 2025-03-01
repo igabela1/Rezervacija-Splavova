@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+#Naziv projekta: Rezervacija Splavova
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Opis:
+Ova web aplikacija omogućava korisnicima da rezervišu splavove za rekreaciju. Korisnici mogu pregledati dostupne splavove, odabrati datum i vrijeme, te izvršiti rezervaciju putem jednostavnog obrasca. Aplikacija koristi Firebase za pohranu podataka o rezervacijama, omogućavajući dinamičko ažuriranje dostupnih splavova na osnovu odabranog datuma.
 
-## Available Scripts
+#Tehnologije:
+React: Frontend aplikacija je izgrađena pomoću React biblioteke, omogućavajući modularan i reaktivan korisnički interfejs.
+JavaScript (ES6+): Korišten za implementaciju logike aplikacije, manipulaciju DOM-om i interakciju sa Firebase bazom podataka.
+CSS3: Za stilizovanje aplikacije i prilagođavanje izgleda različitim uređajima (responsive design).
+Firebase: Korišten kao backend servis za pohranu podataka o rezervacijama u NoSQL bazi podataka (Firestore). Firebase Authentication se može dodati za upravljanje korisničkim nalozima (nije vidljivo u dostavljenom kodu, ali se može dodati).
+HTML5: Za strukturu web stranica.
+Responsive Design: Aplikacija je dizajnirana da bude responsivna, prilagođavajući se različitim veličinama ekrana (mobilni uređaji, tableti, desktop računari) pomoću CSS media queries.
 
-In the project directory, you can run:
+#Izgled aplikacije:
+![izgled app](https://github.com/user-attachments/assets/2767491a-3631-449a-bcc8-fe1e85049feb)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#Funkcionalnosti:
+Pregled dostupnih splavova sa slikama.
+Odabir datuma za rezervaciju.
+Forma za unos ličnih podataka i odabir splava.
+Pohranjivanje rezervacija u Firebase Firestore bazu podataka.
+Dinamičko prikazivanje dostupnih splavova na osnovu odabranog datuma.
+Mogućnost dodavanja funkcionalnosti za prikaz liste rezervacija i upravljanje njima (nije vidljivo u dostavljenom kodu, ali se može dodati).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Kako pokrenuti aplikaciju:
+Klonirajte repozitorij.
+Instalirajte potrebne zavisnosti pomoću npm install.
+Konfigurišite Firebase sa svojim kredencijalima.
+Pokrenite aplikaciju pomoću npm start.
